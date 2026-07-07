@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearCut — Executive Background Intelligence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="neon-orb orb-orange"></div>
+    <div class="neon-orb orb-teal"></div>
+
+    <div class="app-container">
+        <header class="vip-header">
+            <div class="logo-group">
+                <span class="sub-title">Next-Gen AI Engine</span>
+                <h1 class="main-title">Clear<span class="gradient-text">Cut</span></h1>
+            </div>
+            <div class="api-badge">
+                <i class="fa-solid fa-bolt"></i> Ultra HD Processing
+            </div>
+        </header>
+
+        <main class="workspace-grid">
+
+            <section class="glass-panel upload-section">
+                <h3 class="panel-title"><i class="fa-solid fa-cloud-arrow-up"></i> Source Ingestion</h3>
+
+                <div class="drop-zone" id="dropZone">
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    <div class="drop-zone-content">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h4>Drag & drop your image here</h4>
+                        <p>or <span class="browse-link">browse from device</span></p>
+                        <span class="file-specs">Supports PNG, JPG, WEBP (Max 10MB)</span>
+                    </div>
+                </div>
+
+                <div class="control-actions">
+                    <button class="vip-btn btn-primary" id="processBtn" disabled>
+                        <i class="fa-solid fa-scissors"></i> Remove Background
+                    </button>
+                    <button class="vip-btn btn-secondary" id="resetBtn" style="display: none;">
+                        <i class="fa-solid fa-rotate-left"></i> Reset Studio
+                    </button>
+                </div>
+            </section>
+
+            <section class="glass-panel preview-section">
+                <h3 class="panel-title"><i class="fa-solid fa-display"></i> Intelligence Studio</h3>
+
+                <div class="studio-viewer">
+                    <div class="viewer-placeholder" id="viewerPlaceholder">
+                        <i class="fa-regular fa-image"></i>
+                        <p>Awaiting source asset image transmission...</p>
+                    </div>
+
+                    <div class="split-image-container" id="splitContainer" style="display: none;">
+                        <div class="image-box original-box">
+                            <img id="originalPreview" src="" alt="Original Source">
+                            <span class="img-badge badge-left">Original</span>
+                        </div>
+                        <div class="image-box result-box transparent-grid-bg">
+                            <img id="resultPreview" src="" alt="AI Result">
+                            <span class="img-badge badge-right">AI Cutout</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-hub" id="downloadHub" style="display: none;">
+                    <div class="status-indicator">
+                        <span class="pulse-dot"></span> Processing Perfected
+                    </div>
+                    <button class="vip-btn btn-success" id="downloadBtn">
+                        <i class="fa-solid fa-download"></i> Download HD Asset
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
